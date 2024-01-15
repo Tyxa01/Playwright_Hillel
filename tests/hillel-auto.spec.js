@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Hillel auto", () => {
-  test("Register", async ({ page }) => {
+test.describe("Base page test", () => {
+  test("Registration", async ({ page }) => {
     const emailInput = page.locator("#signupEmail");
     const passwordInput = page.locator('input[name="password"]');
     const repeatPasswordInput = page.locator('input[name="repeatPassword"]');
