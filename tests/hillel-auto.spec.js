@@ -17,6 +17,5 @@ test.describe("Base page test", () => {
     await passwordInput.fill("Password12345");
     await repeatPasswordInput.fill("Password12345");
     await page.locator("button", { hasText: "Register" }).click();
-    await page.pause();
   });
 });
