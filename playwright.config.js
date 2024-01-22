@@ -25,9 +25,10 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
+    baseURL: "https:qauto.forstudy.space",
     httpCredentials: {
-      username: "guest",
-      password: "welcome2qauto",
+      username: `${process.env.AUTH_USERNAME}`,
+      password: `${process.env.AUTH_PASSWORD}`,
     },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -48,20 +49,18 @@ module.exports = defineConfig({
         dependencies: ["setup"],
       },
     },
-
-    {
-      name: "firefox",
-      use: {
-        ...devices["Desktop Firefox"],
-        storageState: "auth.json",
-        dependencies: ["setup"],
-      },
-    },
-
     {
       name: "webkit",
       use: {
         ...devices["Desktop Safari"],
+        storageState: "auth.json",
+        dependencies: ["setup"],
+      },
+    },
+    {
+      name: "firefox",
+      use: {
+        ...devices["Desktop Firefox"],
         storageState: "auth.json",
         dependencies: ["setup"],
       },
