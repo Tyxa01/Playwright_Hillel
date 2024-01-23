@@ -11,6 +11,6 @@ export class GaragePage {
     });
     this.numberOfLiters = page.getByLabel("Number of liters");
     this.totalCost = page.getByLabel("Total cost");
-    this.test = page.getByRole("cell", { name: "USD" });
+    this.tableCellCurrency = page.getByRole("cell", { name: "USD" });
   }
 }
