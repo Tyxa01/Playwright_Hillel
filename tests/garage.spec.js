@@ -15,6 +15,6 @@ test.describe("Garage page tests", () => {
     await garagePage.totalCost.fill("20000");
     await garagePage.mileageInput.fill("110");
     await garagePage.addButton.click();
-    await expect(garagePage.test).toHaveText("20000.00 USD");
+    await expect(garagePage.tableCellCurrency).toHaveText("20000.00 USD");
   });
 });

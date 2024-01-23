@@ -9,5 +9,6 @@ test.describe("Profile tests ", () => {
     await profilePage.editProfile.click();
     await profilePage.photoLoader;
     await profilePage.saveButton.click();
+    await expect(profilePage.updatePhotoPopup).toBeVisible();
   });
 });

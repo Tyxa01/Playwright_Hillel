@@ -8,5 +8,6 @@ export class ProfilePage {
       "fixtures/logo.png"
     );
     this.saveButton = page.locator("button", { hasText: "Save" });
+    this.updatePhotoPopup = page.locator(".alert-success");
   }
 }
