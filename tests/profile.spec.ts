@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { ProfilePage } from "./POM/profile.page";
 
 test.describe("Profile tests ", () => {
-  test.only("Profile photo update", async ({ page }) => {
+  test("Profile photo update", async ({ page }) => {
     const profilePage = new ProfilePage(page);
     await profilePage.open();
     await profilePage.editProfileButton.click();
